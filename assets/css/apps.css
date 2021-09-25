@@ -1,0 +1,49 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+body {
+    background-color: #fafafa;
+}
+lottie-player {
+    margin: 0 auto;
+}
+.shadow-sm {
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.05);
+}
+.bg-light {
+    background-color: #fafafa!important;
+}
+/* Text Size */
+.fs-7 {
+    font-size: 14px;
+}
+.fs-8 {
+    font-size: 12px;
+}
+header h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+header p {
+    color: rgba(110, 110, 110, 0.867);
+    margin-bottom: 15px;
+}
+.btn-main {
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.link-container {
+    text-align: center;
+    background-color: #eeeeee;
+    height: 80px;
+    width: auto;
+    border-radius: 10px;
+}
+.link-container i {
+    line-height: 80px;
+    font-size: 24px;
+    color: rgb(44, 44, 44);
+}
+footer p {
+    text-align: center;
+}
