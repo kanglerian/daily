@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="shortcut icon" href="./assets/icons/favicon.png">
     <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/css/apps.css">
@@ -30,7 +30,7 @@
         <p>今日は あなたのものです。がんばってください！👋</p>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#" data-aos="fade-up" data-aos-delay="100">
                 <img src="./assets/icons/logo-codale.svg" height="60" class="d-inline-block align-top" alt="Daily Apps">
@@ -39,9 +39,9 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto fs-7 text-center">
-                    <li class="nav-item active" data-aos="fade-up" data-aos-delay="100">
-                        <a class="nav-link mx-2" href="#">Home <span class="sr-only">(current)</span></a>
+                <ul class="navbar-nav ms-auto fs-7 text-center">
+                    <li class="nav-item" data-aos="fade-up" data-aos-delay="100">
+                        <a class="nav-link mx-2 active" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item" data-aos="fade-up" data-aos-delay="200">
                         <a class="nav-link mx-2" href="#report">Report</a>
@@ -56,8 +56,8 @@
 
     <header>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6 align-self-center my-4">
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-5 align-self-center my-4">
                     <h1 data-aos="fade-up" data-aos-delay="200"><b>One Link for Anything. Productivity is The Important.</b></h1>
                     <p data-aos="fade-up" data-aos-delay="300">Increase work and learning activities to be <b>productive</b> in managing <b>time</b>, <b>energy</b> and <b>money</b>.</p>
                     <a href="https://kanglerian.github.io" class="btn btn-success btn-sm btn-main" data-aos="fade-up" data-aos-delay="400">Get Started</a>
@@ -117,75 +117,83 @@
                     <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_bxvhdvve.json" background="transparent" speed="1" style="width: auto; height: 400px;" loop autoplay></lottie-player>
                 </div>
                 <div class="col-12 col-md-7">
-                    <form name="daily-app-form">
-                        <h3 data-aos="fade-up"><b>Daily Evaluation</b></h3>
-                        <p data-aos="fade-up" data-aos-delay="100">What are you doing today?</p>
-                        <hr class="mb-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="form-row">
-                            <div class="form-group col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                <label>How are you?</label>
-                                <select class="form-control" name="kabar" required>
-                                <option>Choose</option>
-                                <option value="Good">Good</option>
-                                <option value="Unwell">Unwell</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-md-6" data-aos="fade-up" data-aos-delay="350">
-                                <label>Read al-Qur'an</label>
-                                <select class="form-control" name="ngaji" required>
+                    <h3 data-aos="fade-up"><b>Daily Evaluation</b></h3>
+                    <p data-aos="fade-up" data-aos-delay="100">What are you doing today?</p>
+                    <hr class="mb-4" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                        <strong>Terima kasih!</strong> Evaluasi harian telah ditambahkan.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+                    <form class="row g-3" name="daily-app-form">
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                          <label class="form-label">How are you?</label>
+                          <select class="form-control" name="kabar" required>
+                            <option>Choose</option>
+                            <option value="Good">Good</option>
+                            <option value="Unwell">Unwell</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="350">
+                            <label class="form-label">Read al-Qur'an</label>
+                            <select class="form-control" name="ngaji" required>
                                 <option>Choose</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
-                              </select>
-                            </div>
+                            </select>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-3 col-6" data-aos="fade-up" data-aos-delay="450">
-                                <label>Shubuh</label>
-                                <select class="form-control" name="shubuh" required>
+                        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                            <label class="form-label">Shubuh</label>
+                            <select class="form-control" name="shubuh" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="500">
-                                <label>Dzuhur</label>
-                                <select class="form-control" name="dzuhur" required>
-                                <option>Choose</option>
-                                <option value="Together">Together</option>
-                                <option value="Alone">Alone</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="550">
-                                <label>Ashar</label>
-                                <select class="form-control" name="ashar" required>
-                                <option>Choose</option>
-                                <option value="Together">Together</option>
-                                <option value="Alone">Alone</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="600">
-                                <label>Maghrib</label>
-                                <select class="form-control" name="maghrib" required>
-                                <option>Choose</option>
-                                <option value="Together">Together</option>
-                                <option value="Alone">Alone</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-md-3 col-12" data-aos="fade-up" data-aos-delay="650">
-                                <label>Isya</label>
-                                <select class="form-control" name="isya" required>
-                                <option>Choose</option>
-                                <option value="Together">Together</option>
-                                <option value="Alone">Alone</option>
-                              </select>
-                            </div>
+                            </select>
                         </div>
-                        <div class="form-group" data-aos="fade-up" data-aos-delay="700">
-                            <label>What you did learn today?</label>
+                        <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="450">
+                            <label class="form-label">Dzuhur</label>
+                            <select class="form-control" name="dzuhur" required>
+                                <option>Choose</option>
+                                <option value="Together">Together</option>
+                                <option value="Alone">Alone</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="500">
+                            <label class="form-label">Ashar</label>
+                            <select class="form-control" name="ashar" required>
+                                <option>Choose</option>
+                                <option value="Together">Together</option>
+                                <option value="Alone">Alone</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="550">
+                            <label class="form-label">Maghrib</label>
+                            <select class="form-control" name="maghrib" required>
+                                <option>Choose</option>
+                                <option value="Together">Together</option>
+                                <option value="Alone">Alone</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="450">
+                            <label class="form-label">Isya</label>
+                            <select class="form-control" name="isya" required>
+                                <option>Choose</option>
+                                <option value="Together">Together</option>
+                                <option value="Alone">Alone</option>
+                            </select>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="700">
+                            <label class="form-label">What you did learn today?</label>
                             <textarea class="form-control" rows="3" name="belajar" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-sm btn-block btn-submit" data-aos="fade-up" data-aos-delay="750"><i class="fas fa-save mr-2"></i> Save</button>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="750">
+                          <button type="submit" class="btn btn-primary btn-sm btn-kirim"><i class="fas fa-save mr-2"></i> Save</button>
+                          <button class="btn btn-primary btn-sm btn-loading d-none" type="button">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                          </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -205,8 +213,8 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script>
         $('.owl-carousel').owlCarousel({
@@ -240,11 +248,27 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyw0txU4ZFD62h0ZlAKMSffNDcNBw8QbZTystprp1wVNAAIyFuSKt2HQOp3S7yTsxPmLA/exec'
         const form = document.forms['daily-app-form']
-    
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const myAlert = document.querySelector('.my-alert');
+
         form.addEventListener('submit', e => {
         e.preventDefault()
+        // ketika tombol submit di tekan
+        // tampilkan tombol loading dan hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
+            .then(response => {
+                // tampilkan tombol kirim dan hilangkan tombol loading
+                btnLoading.classList.toggle('d-none');
+                btnKirim.classList.toggle('d-none');
+                // Tampilkan alert
+                myAlert.classList.toggle('d-none');
+                // Reset form
+                form.reset();
+                console.log('Success!', response)
+            })
             .catch(error => console.error('Error!', error.message))
         })
     </script>
