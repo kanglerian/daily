@@ -41,9 +41,40 @@ header p {
 }
 .link-container i {
     line-height: 80px;
-    font-size: 24px;
+    font-size: 28px;
     color: rgb(44, 44, 44);
+}
+.link-container span {
+    font-size: 14px;
+    display: inline-block;
+    align-content: center;
 }
 footer p {
     text-align: center;
+}
+footer p a {
+    color: #1E639D;
+    text-decoration: none!important;
+}
+
+.form-control {
+    border-radius: 10px!important;
+    border: 1px solid #eeeeee;
+    color: rgb(92, 92, 92);
+    font-size: 14px;
+}
+label {
+    font-size: 14px;
+}
+.btn-primary{
+    background-color: #1E639D;
+    border-radius: 10px;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: #19578a;
+    border: none;
+}
+.rotate {
+    transform: rotate(-8deg)
 }

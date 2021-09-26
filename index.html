@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./assets/icons/logo-codale.svg" height="40" class="d-inline-block align-top" alt="Daily Apps">
+                <img src="./assets/icons/logo-codale.svg" height="50" class="d-inline-block align-top rotate" alt="Daily Apps">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,13 +36,10 @@
                         <a class="nav-link mx-2" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" href="#">Features</a>
+                        <a class="nav-link mx-2" href="#social-media">Social Media</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="#">Sign Up</a>
+                        <a class="nav-link mx-2" href="#evaluation">Evaluation</a>
                     </li>
                 </ul>
             </div> 
@@ -55,7 +52,7 @@
                 <div class="col-12 col-md-6 align-self-center my-4">
                     <h1><b>One Link for Anything. Productivity is The Important.</b></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum ad earum eveniet dolor facere similique beatae aliquid ex? Cum est unde aliquam.</p>
-                    <button class="btn btn-success btn-main">Get Started</button>
+                    <button class="btn btn-success btn-sm btn-main">Get Started</button>
                 </div>
                 <div class="col-12 col-md-6 align-self-start d-none d-md-block">
                     <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ugbckvu9.json"  background="transparent"  speed="1"  style="width: auto; height: 600px;"  loop autoplay></lottie-player>
@@ -64,24 +61,111 @@
         </div>
     </header>
 
-    <section class="links my-4">
+    <section class="links mb-3" id="social-media">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="owl-carousel owl-theme">
                         <div class="link-container">
-                            <a href="https://facebook.com/kanglerian"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://facebook.com/kanglerian"><i class="fas fa-file-excel"></i></a>
                         </div>
                         <div class="link-container">
-                            <a href="https://twitter.com/kanglerian"><i class="fab fa-twitter"></i></a>
+                            <a href="https://twitter.com/kanglerian"><i class="fas fa-table"></i></a>
                         </div>
                         <div class="link-container">
-                            <a href="https://github.com/kanglerian"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/kanglerian"><i class="fas fa-ad"></i></a>
                         </div>
                         <div class="link-container">
                             <a href="https://instagram.com/kanglerian"><i class="fab fa-instagram"></i></a>
                         </div>
+                        <div class="link-container">
+                            <a href="https://instagram.com/kanglerian"><i class="fab fa-figma"></i></a>
+                        </div>
+                        <div class="link-container">
+                            <a href="https://instagram.com/kanglerian"><i class="fas fa-credit-card"></i></a>
+                        </div>
+                        <div class="link-container">
+                            <a href="https://instagram.com/kanglerian"><i class="fas fa-database"></i></a>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="checklist py-5" id="evaluation">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-5">
+                    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_bxvhdvve.json"  background="transparent"  speed="1"  style="width: auto; height: 400px;"  loop autoplay></lottie-player>
+                </div>
+                <div class="col-12 col-md-7">
+                    <form>
+                        <h3><b>Daily Evaluation</b></h3>
+                        <p>What are you doing today?</p>
+                        <hr class="mb-4">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Date</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label>How are you?</label>
+                              <select class="form-control">
+                                <option>Pilih</option>
+                                <option>Good</option>
+                                <option>Unwell</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3 col-6">
+                              <label>Shubuh</label>
+                              <select class="form-control">
+                                <option>Choose</option>
+                                <option>Together</option>
+                                <option>Alone</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-2 col-6">
+                              <label>Dzuhur</label>
+                              <select class="form-control">
+                                <option>Choose</option>
+                                <option>Together</option>
+                                <option>Alone</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-2 col-6">
+                              <label>Ashar</label>
+                              <select class="form-control">
+                                <option>Choose</option>
+                                <option>Together</option>
+                                <option>Alone</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-2 col-6">
+                              <label>Maghrib</label>
+                              <select class="form-control">
+                                <option>Choose</option>
+                                <option>Together</option>
+                                <option>Alone</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-3 col-6">
+                              <label>Isya</label>
+                              <select class="form-control">
+                                <option>Choose</option>
+                                <option>Together</option>
+                                <option>Alone</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label>What you did learn today?</label>
+                          <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm btn-block btn-submit"><i class="fas fa-save mr-2"></i> Save</button>
+                      </form>
                 </div>
             </div>
         </div>
@@ -108,7 +192,7 @@
         $('.owl-carousel').owlCarousel({
             loop:true,
             margin:10,
-            nav:false,
+            dots:false,
             responsive:{
                 0:{
                     items:2
