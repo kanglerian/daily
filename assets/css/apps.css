@@ -5,7 +5,7 @@ body {
     background-color: #fafafa;
 }
 lottie-player {
-    margin: 0 auto;
+    margin: 0 auto!important;
 }
 .informasi {
     text-align: center;
