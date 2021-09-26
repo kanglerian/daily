@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <title>Daily Apps 👋 | Codale Center</title>
@@ -96,20 +97,20 @@
     <section class="checklist py-5" id="evaluation">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" data-aos="fade-up" data-aos-delay="150">
                     <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_bxvhdvve.json"  background="transparent"  speed="1"  style="width: auto; height: 400px;"  loop autoplay></lottie-player>
                 </div>
                 <div class="col-12 col-md-7">
                     <form>
-                        <h3><b>Daily Evaluation</b></h3>
-                        <p>What are you doing today?</p>
-                        <hr class="mb-4">
+                        <h3 data-aos="fade-up"><b>Daily Evaluation</b></h3>
+                        <p data-aos="fade-up" data-aos-delay="100">What are you doing today?</p>
+                        <hr class="mb-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6" data-aos="fade-up" data-aos-delay="350">
                                 <label>Date</label>
                                 <input type="date" class="form-control">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6" data-aos="fade-up" data-aos-delay="400">
                               <label>How are you?</label>
                               <select class="form-control">
                                 <option>Pilih</option>
@@ -119,7 +120,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-3 col-6">
+                            <div class="form-group col-md-3 col-6" data-aos="fade-up" data-aos-delay="450">
                               <label>Shubuh</label>
                               <select class="form-control">
                                 <option>Choose</option>
@@ -127,7 +128,7 @@
                                 <option>Alone</option>
                               </select>
                             </div>
-                            <div class="form-group col-md-2 col-6">
+                            <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="500">
                               <label>Dzuhur</label>
                               <select class="form-control">
                                 <option>Choose</option>
@@ -135,7 +136,7 @@
                                 <option>Alone</option>
                               </select>
                             </div>
-                            <div class="form-group col-md-2 col-6">
+                            <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="550">
                               <label>Ashar</label>
                               <select class="form-control">
                                 <option>Choose</option>
@@ -143,7 +144,7 @@
                                 <option>Alone</option>
                               </select>
                             </div>
-                            <div class="form-group col-md-2 col-6">
+                            <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="600">
                               <label>Maghrib</label>
                               <select class="form-control">
                                 <option>Choose</option>
@@ -151,7 +152,7 @@
                                 <option>Alone</option>
                               </select>
                             </div>
-                            <div class="form-group col-md-3 col-6">
+                            <div class="form-group col-md-3 col-6" data-aos="fade-up" data-aos-delay="650">
                               <label>Isya</label>
                               <select class="form-control">
                                 <option>Choose</option>
@@ -160,11 +161,11 @@
                               </select>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" data-aos="fade-up" data-aos-delay="700">
                           <label>What you did learn today?</label>
                           <textarea class="form-control" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-sm btn-block btn-submit"><i class="fas fa-save mr-2"></i> Save</button>
+                        <button type="submit" class="btn btn-primary btn-sm btn-block btn-submit" data-aos="fade-up" data-aos-delay="750"><i class="fas fa-save mr-2"></i> Save</button>
                       </form>
                 </div>
             </div>
@@ -210,5 +211,13 @@
         gsap.from("#btn-header",{duration: 2.5, ease:"elastic.out(1,0.3)", y:-500, rotate:-20, delay:0.2})
         gsap.from("#social-media",{duration: 0.7, y:200, delay:0.3, opacity:0})
     </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+            duration:600,
+            easing: 'ease',
+        });
+      </script>
+    
   </body>
 </html>
