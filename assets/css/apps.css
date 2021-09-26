@@ -90,3 +90,17 @@ label {
 hr {
     color: #eeeeee!important;
 }
+.alert-success {
+    color: #fff;
+    border: none;
+    background-color: rgb(4, 180, 4);
+    border-radius: 10px;
+    font-size: 14px;
+}
+.btn-success {
+    background-color: rgb(4, 180, 4);
+    border: none;
+}
+.btn-success:hover {
+    background-color: rgb(4, 165, 4);
+}
