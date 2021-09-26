@@ -117,15 +117,14 @@
                     <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_bxvhdvve.json" background="transparent" speed="1" style="width: auto; height: 400px;" loop autoplay></lottie-player>
                 </div>
                 <div class="col-12 col-md-7">
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScGsyRN6uPUByxxSbS5JUaqfEPrxIWLwMnyP4aPlpjsnN-DAQ/formResponse" method="POST">
+                    <form name="daily-app-form">
                         <h3 data-aos="fade-up"><b>Daily Evaluation</b></h3>
                         <p data-aos="fade-up" data-aos-delay="100">What are you doing today?</p>
                         <hr class="mb-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="form-row">
-                            <input type="hidden" name="dlut" value="1632644831701">
                             <div class="form-group col-md-6" data-aos="fade-up" data-aos-delay="300">
                                 <label>How are you?</label>
-                                <select class="form-control" name="entry.301920939" required>
+                                <select class="form-control" name="kabar" required>
                                 <option>Choose</option>
                                 <option value="Good">Good</option>
                                 <option value="Unwell">Unwell</option>
@@ -133,7 +132,7 @@
                             </div>
                             <div class="form-group col-md-6" data-aos="fade-up" data-aos-delay="350">
                                 <label>Read al-Qur'an</label>
-                                <select class="form-control" name="entry.263593313" required>
+                                <select class="form-control" name="ngaji" required>
                                 <option>Choose</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
@@ -143,7 +142,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-3 col-6" data-aos="fade-up" data-aos-delay="450">
                                 <label>Shubuh</label>
-                                <select class="form-control" name="entry.1669965973" required>
+                                <select class="form-control" name="shubuh" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -151,7 +150,7 @@
                             </div>
                             <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="500">
                                 <label>Dzuhur</label>
-                                <select class="form-control" name="entry.2070726832" required>
+                                <select class="form-control" name="dzuhur" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -159,7 +158,7 @@
                             </div>
                             <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="550">
                                 <label>Ashar</label>
-                                <select class="form-control" name="entry.1031122303" required>
+                                <select class="form-control" name="ashar" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -167,7 +166,7 @@
                             </div>
                             <div class="form-group col-md-2 col-6" data-aos="fade-up" data-aos-delay="600">
                                 <label>Maghrib</label>
-                                <select class="form-control" name="entry.1204795680" required>
+                                <select class="form-control" name="maghrib" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -175,7 +174,7 @@
                             </div>
                             <div class="form-group col-md-3 col-12" data-aos="fade-up" data-aos-delay="650">
                                 <label>Isya</label>
-                                <select class="form-control" name="entry.1577959464" required>
+                                <select class="form-control" name="isya" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -184,7 +183,7 @@
                         </div>
                         <div class="form-group" data-aos="fade-up" data-aos-delay="700">
                             <label>What you did learn today?</label>
-                            <textarea class="form-control" rows="3" name="entry.1979426927" required></textarea>
+                            <textarea class="form-control" rows="3" name="belajar" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-sm btn-block btn-submit" data-aos="fade-up" data-aos-delay="750"><i class="fas fa-save mr-2"></i> Save</button>
                     </form>
@@ -238,7 +237,17 @@
             once:true,
         });
     </script>
-
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyw0txU4ZFD62h0ZlAKMSffNDcNBw8QbZTystprp1wVNAAIyFuSKt2HQOp3S7yTsxPmLA/exec'
+        const form = document.forms['daily-app-form']
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>
