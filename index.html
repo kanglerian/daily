@@ -120,14 +120,14 @@
                 <div class="col-md-6 col-12">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation" data-aos="fade-up" data-aos-delay="100">
-                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-pray" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fas fa-pray me-2"></i> Pray</button>
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-pray" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fas fa-pray me-2"></i> Pray</button>
                         </li>
                         <li class="nav-item" role="presentation" data-aos="fade-up" data-aos-delay="150">
-                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-task" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-clipboard-list me-2"></i> Task</button>
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-task" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-clipboard-list me-2"></i> Task</button>
                         </li>
-                      </ul>
-                      <hr>
-                      <div class="tab-content" id="pills-tabContent">
+                    </ul>
+                    <hr>
+                    <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-pray" role="tabpanel" aria-labelledby="pills-home-tab">
                             <h3 data-aos="fade-up"><b>Daily Evaluation</b></h3>
                             <p data-aos="fade-up" data-aos-delay="100">What are you doing today?</p>
@@ -140,8 +140,8 @@
 
                             <form class="row g-3" name="daily-app-form">
                                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                <label class="form-label">How are you?</label>
-                                <select class="form-control" name="Kabar" required>
+                                    <label class="form-label">How are you?</label>
+                                    <select class="form-control" name="Kabar" required>
                                     <option>Choose</option>
                                     <option value="Good">Good</option>
                                     <option value="Unwell">Unwell</option>
@@ -200,15 +200,15 @@
                                     <textarea class="form-control" rows="3" name="Belajar" required></textarea>
                                 </div>
                                 <div class="col-12 d-grid" data-aos="fade-up" data-aos-delay="750">
-                                <button type="submit" class="btn btn-primary btn-sm btn-kirim"><i class="fas fa-save mr-2"></i> Save</button>
-                                <button class="btn btn-primary btn-sm btn-loading d-none" type="button">
+                                    <button type="submit" class="btn btn-primary btn-sm btn-kirim"><i class="fas fa-save mr-2"></i> Save</button>
+                                    <button class="btn btn-primary btn-sm btn-loading d-none" type="button">
                                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                     Loading...
                                 </button>
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane fade" id="pills-task" role="tabpanel" aria-labelledby="pills-profile-tab">   
+                        <div class="tab-pane fade" id="pills-task" role="tabpanel" aria-labelledby="pills-profile-tab">
                             <h3 data-aos="fade-up"><b>Complete Task List</b></h3>
                             <p data-aos="fade-up" data-aos-delay="100">What you're task?</p>
                             <hr class="mb-4" data-aos="fade-up" data-aos-delay="200">
@@ -230,6 +230,8 @@
                                         <option value="LP3I">LP3I</option>
                                         <option value="Genami Tech">Genami Tech</option>
                                         <option value="Youtube">Youtube</option>
+                                        <option value="Business">Business</option>
+                                        <option value="Self">Self</option>
                                         <option value="Others">Others</option>
                                     </select>
                                 </div>
@@ -254,7 +256,7 @@
                                 </button>
                             </form>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -303,10 +305,10 @@
         AOS.init({
             duration: 600,
             easing: 'ease',
-            once:true,
+            once: true,
         });
     </script>
-     <script>
+    <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyw0txU4ZFD62h0ZlAKMSffNDcNBw8QbZTystprp1wVNAAIyFuSKt2HQOp3S7yTsxPmLA/exec'
         const form = document.forms['daily-app-form']
         const btnKirim = document.querySelector('.btn-kirim');
@@ -314,52 +316,58 @@
         const myAlert = document.querySelector('.my-alert');
 
         form.addEventListener('submit', e => {
-        e.preventDefault()
-        // ketika tombol submit di tekan
-        // tampilkan tombol loading dan hilangkan tombol kirim
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                // tampilkan tombol kirim dan hilangkan tombol loading
-                btnLoading.classList.toggle('d-none');
-                btnKirim.classList.toggle('d-none');
-                // Tampilkan alert
-                myAlert.classList.toggle('d-none');
-                // Reset form
-                form.reset();
-                console.log('Success!', response)
-            })
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+                // ketika tombol submit di tekan
+                // tampilkan tombol loading dan hilangkan tombol kirim
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    // tampilkan tombol kirim dan hilangkan tombol loading
+                    btnLoading.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    // Tampilkan alert
+                    myAlert.classList.toggle('d-none');
+                    // Reset form
+                    form.reset();
+                    console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message))
         })
     </script>
 
-<script>
-    const scriptURLS = 'https://script.google.com/macros/s/AKfycbzP04leE46spwC256rXFePJB9ibPSJr47aSpqbllmyzrtCtMFvkVhyiJRGJQwaQ-G6Y/exec'
-    const formw = document.forms['submit-to-google-sheet']
-    
-    const taskSend = document.querySelector('.task-send');
-    const taskLoading = document.querySelector('.task-loading');
-    const taskAlert = document.querySelector('.task-alert')
+    <script>
+        const scriptURLS = 'https://script.google.com/macros/s/AKfycbzP04leE46spwC256rXFePJB9ibPSJr47aSpqbllmyzrtCtMFvkVhyiJRGJQwaQ-G6Y/exec'
+        const formw = document.forms['submit-to-google-sheet']
 
-    formw.addEventListener('submit', e => {
-      e.preventDefault()
-      taskSend.classList.toggle('d-none');
-      taskLoading.classList.toggle('d-none');
-      fetch(scriptURLS, { method: 'POST', body: new FormData(formw)})
-        .then(response => {
-            // tampilkan tombol kirim dan hilangkan tombol loading
-            taskLoading.classList.toggle('d-none');
+        const taskSend = document.querySelector('.task-send');
+        const taskLoading = document.querySelector('.task-loading');
+        const taskAlert = document.querySelector('.task-alert')
+
+        formw.addEventListener('submit', e => {
+            e.preventDefault()
             taskSend.classList.toggle('d-none');
-                // Tampilkan alert
-            taskAlert.classList.toggle('d-none');
-                // Reset form
-            formw.reset();
-            console.log('Success!', response)
+            taskLoading.classList.toggle('d-none');
+            fetch(scriptURLS, {
+                    method: 'POST',
+                    body: new FormData(formw)
+                })
+                .then(response => {
+                    // tampilkan tombol kirim dan hilangkan tombol loading
+                    taskLoading.classList.toggle('d-none');
+                    taskSend.classList.toggle('d-none');
+                    // Tampilkan alert
+                    taskAlert.classList.toggle('d-none');
+                    // Reset form
+                    formw.reset();
+                    console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    </script>
 </body>
 
 </html>
