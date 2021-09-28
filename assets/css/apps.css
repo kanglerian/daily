@@ -113,3 +113,14 @@ hr {
     border:none;
     font-size: 14px;
 }
+.nav-pills {
+    font-size: 15px;
+}
+.nav-pills button {
+    color: #1E639D!important;
+}
+.nav-pills .active {
+    background-color: #1E639D!important;
+    border-radius: 10px!important;
+    color: #fff!important;
+}
