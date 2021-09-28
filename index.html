@@ -60,7 +60,8 @@
                 <div class="col-12 col-md-6 align-self-center my-4">
                     <h1 data-aos="fade-up" data-aos-delay="200"><b>One Link for Anything. Productivity is The Important.</b></h1>
                     <p data-aos="fade-up" data-aos-delay="300">Increase work and learning activities to be <b>productive</b><br>in managing <b>time</b>, <b>energy</b> and <b>money</b>.</p>
-                    <a href="https://kanglerian.github.io" class="btn btn-success btn-sm btn-main" data-aos="fade-up" data-aos-delay="400">Get Started</a>
+                    <a href="https://kanglerian.github.io" class="btn btn-success btn-sm btn-main me-1" data-aos="fade-up" data-aos-delay="400">Get Started</a>
+                    <button data-bs-toggle="modal" data-bs-target="#taskModal" class="btn btn-primary btn-sm btn-main" data-aos="fade-up" data-aos-delay="450"><i class="fas fa-clipboard-list me-2"></i> Add Task</button>
                 </div>
                 <div class="col-12 col-md-6 align-self-start d-none d-md-block text-center" data-aos="fade-up" data-aos-delay="400">
                     <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ugbckvu9.json" background="transparent" speed="1" style="width: auto; height: 600px;" loop autoplay></lottie-player>
@@ -129,7 +130,7 @@
                     <form class="row g-3" name="daily-app-form">
                         <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                           <label class="form-label">How are you?</label>
-                          <select class="form-control" name="kabar" required>
+                          <select class="form-control" name="Kabar" required>
                             <option>Choose</option>
                             <option value="Good">Good</option>
                             <option value="Unwell">Unwell</option>
@@ -137,7 +138,7 @@
                         </div>
                         <div class="col-md-6" data-aos="fade-up" data-aos-delay="350">
                             <label class="form-label">Read al-Qur'an</label>
-                            <select class="form-control" name="ngaji" required>
+                            <select class="form-control" name="Ngaji" required>
                                 <option>Choose</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
@@ -145,7 +146,7 @@
                         </div>
                         <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
                             <label class="form-label">Shubuh</label>
-                            <select class="form-control" name="shubuh" required>
+                            <select class="form-control" name="Shubuh" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -153,7 +154,7 @@
                         </div>
                         <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="450">
                             <label class="form-label">Dzuhur</label>
-                            <select class="form-control" name="dzuhur" required>
+                            <select class="form-control" name="Dzuhur" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -161,7 +162,7 @@
                         </div>
                         <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="500">
                             <label class="form-label">Ashar</label>
-                            <select class="form-control" name="ashar" required>
+                            <select class="form-control" name="Ashar" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -169,7 +170,7 @@
                         </div>
                         <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="550">
                             <label class="form-label">Maghrib</label>
-                            <select class="form-control" name="maghrib" required>
+                            <select class="form-control" name="Maghrib" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -177,7 +178,7 @@
                         </div>
                         <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="450">
                             <label class="form-label">Isya</label>
-                            <select class="form-control" name="isya" required>
+                            <select class="form-control" name="Isya" required>
                                 <option>Choose</option>
                                 <option value="Together">Together</option>
                                 <option value="Alone">Alone</option>
@@ -185,7 +186,7 @@
                         </div>
                         <div class="col-12" data-aos="fade-up" data-aos-delay="700">
                             <label class="form-label">What you did learn today?</label>
-                            <textarea class="form-control" rows="3" name="belajar" required></textarea>
+                            <textarea class="form-control" rows="3" name="Belajar" required></textarea>
                         </div>
                         <div class="col-12 d-grid" data-aos="fade-up" data-aos-delay="750">
                           <button type="submit" class="btn btn-primary btn-sm btn-kirim"><i class="fas fa-save mr-2"></i> Save</button>
@@ -200,6 +201,55 @@
         </div>
     </section>
 
+
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <div class="alert alert-info alert-dismissible d-none fade show task-alert" role="alert">
+                        ありがとうございました！👋
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <form class="row g-3" name="submit-to-google-sheet">
+                        <div class="col-12">
+                            <label class="form-label">What your task?</label>
+                            <input name="task" type="text" class="form-control" placeholder="Write your task..." required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">Field</label>
+                            <select name="field" class="form-control">
+                                <option>Choose</option>
+                                <option value="LP3I">LP3I</option>
+                                <option value="Genami Tech">Genami Tech</option>
+                                <option value="Youtube">Youtube</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">Status</label>
+                            <select name="status" class="form-control">
+                                <option>Choose</option>
+                                <option value="Urgently Important">Urgently Important</option>
+                                <option value="Urgently Not Important">Urgently Not Important</option>
+                                <option value="Important Not Urgently">Important Not Urgently</option>
+                                <option value="Not Important Not Urgently">Not Important Not Urgently</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Describe your task</label>
+                            <textarea class="form-control" rows="3" name="description"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm task-send">Send</button>
+                        <button class="btn btn-primary btn-sm task-loading d-none" type="button">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="mt-5">
         <div class="container">
             <div class="row">
@@ -209,6 +259,63 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="row g-3" name="submit-to-google-sheet">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="alert alert-info alert-dismissible d-none fade show task-alert" role="alert">
+                        ありがとうございました！👋
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">What your task?</label>
+                        <input name="task" type="text" class="form-control" placeholder="Write your task..." required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">Field</label>
+                        <select name="field" class="form-control">
+                            <option>Choose</option>
+                            <option value="LP3I">LP3I</option>
+                            <option value="Genami Tech">Genami Tech</option>
+                            <option value="Youtube">Youtube</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-control">
+                            <option>Choose</option>
+                            <option value="Urgently Important">Urgently Important</option>
+                            <option value="Urgently Not Important">Urgently Not Important</option>
+                            <option value="Important Not Urgently">Important Not Urgently</option>
+                            <option value="Not Important Not Urgently">Not Important Not Urgently</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Describe your task</label>
+                        <textarea class="form-control" rows="3" name="description"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm task-send">Send</button>
+                    <button class="btn btn-primary btn-sm task-loading d-none" type="button">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                    </button>
+                    </div>
+                    <div class="modal-footer fs-5">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -245,7 +352,7 @@
             once:true,
         });
     </script>
-    <script>
+     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyw0txU4ZFD62h0ZlAKMSffNDcNBw8QbZTystprp1wVNAAIyFuSKt2HQOp3S7yTsxPmLA/exec'
         const form = document.forms['daily-app-form']
         const btnKirim = document.querySelector('.btn-kirim');
@@ -272,6 +379,33 @@
             .catch(error => console.error('Error!', error.message))
         })
     </script>
+
+<script>
+    const scriptURLS = 'https://script.google.com/macros/s/AKfycbzP04leE46spwC256rXFePJB9ibPSJr47aSpqbllmyzrtCtMFvkVhyiJRGJQwaQ-G6Y/exec'
+    const formw = document.forms['submit-to-google-sheet']
+    
+    const taskSend = document.querySelector('.task-send');
+    const taskLoading = document.querySelector('.task-loading');
+    const taskAlert = document.querySelector('.task-alert')
+
+    formw.addEventListener('submit', e => {
+      e.preventDefault()
+      taskSend.classList.toggle('d-none');
+      taskLoading.classList.toggle('d-none');
+      fetch(scriptURLS, { method: 'POST', body: new FormData(formw)})
+        .then(response => {
+            // tampilkan tombol kirim dan hilangkan tombol loading
+            taskLoading.classList.toggle('d-none');
+            taskSend.classList.toggle('d-none');
+                // Tampilkan alert
+            taskAlert.classList.toggle('d-none');
+                // Reset form
+            form.reset();
+            console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 
 </html>

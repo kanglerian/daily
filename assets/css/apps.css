@@ -75,14 +75,18 @@ footer p a {
 label {
     font-size: 14px;
 }
+.btn {
+    border-radius: 10px;
+    border: none!important;
+}
 .btn-primary{
     background-color: #1E639D;
-    border-radius: 10px;
-    border: none;
 }
 .btn-primary:hover{
     background-color: #19578a;
-    border: none;
+}
+.btn-primary:active{
+    background-color: #19578a!important;
 }
 .rotate {
     transform: rotate(-8deg)
@@ -103,4 +107,9 @@ hr {
 }
 .btn-success:hover {
     background-color: rgb(4, 165, 4);
+}
+.modal-content {
+    border-radius: 1rem!important;
+    border:none;
+    font-size: 14px;
 }
