@@ -227,7 +227,7 @@
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <label class="form-label">Field</label>
-                                    <select name="field" class="form-control">
+                                    <select name="field" class="form-control" required>
                                         <option>Choose</option>
                                         <option value="LP3I">LP3I</option>
                                         <option value="Youtube">Youtube</option>
@@ -240,7 +240,7 @@
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <label class="form-label">Priority</label>
-                                    <select name="status" class="form-control">
+                                    <select name="status" class="form-control" required>
                                         <option>Choose</option>
                                         <option value="Urgently Important">Urgently Important</option>
                                         <option value="Urgently Not Important">Urgently Not Important</option>
@@ -250,7 +250,7 @@
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <label class="form-label">Status</label>
-                                    <select name="checklist" class="form-control">
+                                    <select name="checklist" class="form-control" required>
                                         <option>Choose</option>
                                         <option value="TRUE">Selesai</option>
                                         <option value="FALSE">Belum selesai</option>
@@ -258,7 +258,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Describe your task</label>
-                                    <textarea class="form-control" rows="3" name="description"></textarea>
+                                    <textarea class="form-control" rows="3" name="description" placeholder="Describe your task"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-sm task-send">Send</button>
                                 <button class="btn btn-primary btn-sm task-loading d-none" type="button">
